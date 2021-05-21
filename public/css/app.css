@@ -8,6 +8,15 @@
   width: 24%;
 }
 
+span a {
+  text-decoration: none;
+  color: #0dcaf0;
+}
+
+span a:hover {
+  color: #097d94;
+}
+
 .timer {
   border: 3px solid rgb(46, 206, 206);
   border-radius: 50%;
