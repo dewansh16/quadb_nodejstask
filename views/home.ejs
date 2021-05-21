@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <!-- <script src="/js/bootstrap.min.js"></script> -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <title>HODLINFO</title>
+</head>
+
+<body class="bg-dark mx-4 my-5">
+
+    <section class="header d-flex justify-content-between align-self-baseline mb-5">
+        <div class="cname">
+            <p class="text-light h4 ">
+                <span class="display-4 text-info">HODLINFO</span>.com
+            </p>
+            <p class="text-secondary mt-3 ">Powered By <span class="spons text-info">Finstreet</span></p>
+        </div>
+        <div class="d-flex justify-content-between align-items-center w-30 dropdowns">
+            <div class="dropdown">
+                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    INR
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">INR</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    BTC
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">BTC</a></li>
+                    <li><a class="dropdown-item" href="#">ETH</a></li>
+                    <li><a class="dropdown-item" href="#">USDT</a></li>
+                    <li><a class="dropdown-item" href="#">XRP</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="d-flex align-items-center  buttons justify-content-between">
+            <div class="timer">
+                <h5 class="text-info">58</h5>
+            </div>
+            <button type="button" class="btn btn-info btn-sm text-light ">
+                <h6><i class="fab fa-telegram-plane "> </i> Connect Telegram</h6>
+            </button>
+            <div class="form-check form-switch ">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="table-content">
+        <table class="table  text-center">
+            <thead>
+                <tr class="table-dark ">
+                    <th class="table-dark">
+                        <h4>#</h4>
+                    </th>
+                    <th class="table-dark">
+                        <h4>name</h4>
+                    </th>
+                    <th class="table-dark">
+                        <h4>last</h4>
+                    </th>
+                    <th class="table-dark">
+                        <h4>Buy/Sell price</h4>
+                    </th>
+                    <th class="table-dark">
+                        <h4>volume</h4>
+                    </th>
+                    <th class="table-dark">
+                        <h4>base_unit</h4>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i=0 ;i<10;i++) {%>
+                    <tr class="table-dark text-center bg-secondary">
+                        <td class="table-dark">
+                            <h5>
+                                <%= i+1 %>
+                            </h5>
+                        </td>
+                        <td class="table-dark ">
+                            <h5>
+                                <%= alldata[i].name %>
+                            </h5>
+                        </td>
+
+                        <td class="table-dark">
+                            <h5>
+                                <%= alldata[i].last%>
+                            </h5>
+                        </td>
+                        <td class="table-dark">
+                            <h5>
+                                <%= alldata[i].buy %>/<%= alldata[i].sell %>
+                            </h5>
+                        </td>
+                        <td class="table-dark">
+                            <h5>
+                                <%= alldata[i].volume %>
+                            </h5>
+                        </td>
+                        <td class="table-dark">
+                            <h5>
+                                <%= alldata[i].base_unit %>
+                            </h5>
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+
+</html>

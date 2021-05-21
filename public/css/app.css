@@ -1,0 +1,80 @@
+.cname {
+  width: 17%;
+}
+.dropdowns {
+  width: 10%;
+}
+.buttons {
+  width: 24%;
+}
+
+.timer {
+  border: 3px solid rgb(46, 206, 206);
+  border-radius: 50%;
+}
+
+.timer h5 {
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+.btn {
+  border-radius: 8px;
+}
+
+.buttons .btn-info {
+  border-radius: 8px;
+  padding: 8px;
+  background-color: rgb(46, 206, 206);
+}
+
+div button h6 {
+  margin-bottom: 0;
+}
+
+.form-check-input {
+  font-size: 16px;
+  height: 2em;
+}
+.form-switch .form-check-input {
+  width: 3.5em;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-style: none;
+}
+
+table tbody tr td {
+  padding: 6px !important;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 13px;
+  margin-top: -10px; /* correct offset on first border spacing if desired */
+}
+td {
+  border: solid 1px #000;
+  border-style: solid none;
+  padding: 10px;
+  background-color: #373b3e !important;
+}
+td:first-child {
+  border-left-style: solid;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+td:last-child {
+  border-right-style: solid;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+table thead tr th h4 {
+  color: #838385;
+}
